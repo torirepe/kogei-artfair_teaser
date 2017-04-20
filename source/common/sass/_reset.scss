@@ -125,10 +125,9 @@ acronym {
 i {
 	font-style: normal;
 }
-
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
+main,
+section,
+article,
+time {
+  display: block;
 }

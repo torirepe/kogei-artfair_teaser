@@ -1,34 +1,28 @@
 //h2
+.index .intro .h2_01,
+.index .summary .h2_01,
+.index .entry .h2_01 {
+  position: relative;
+  padding-bottom: 15.6%;
+  text-align: center;
+  font-size: 0;
+  @include fzvw(48);
+  font-weight: normal;
+  line-height: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    margin-left: -21%;
+    padding-bottom: 3.5%;
+    width: 41%;
+    background-color: $c-black;
+  }
+}
 
 //h3
-.index .topics .h3_01,
-.index .works .h3_01, {
-  position: relative;
-  @include fzvw(42);
-  line-height: 1.4;
-  font-family: $f-ubuntu;
-  font-weight: bold;
-  letter-spacing: .1em;
-  i {
-    margin-left: 2.4%;
-    @include fzvw(24);
-    letter-spacing: 0;
-  }
-}
-.index .topics .h3_01,
-.index .works .h3_01, {
-  position: relative;
-  @include fzvw(42);
-  line-height: 1.4;
-  font-family: $f-ubuntu;
-  font-weight: bold;
-  letter-spacing: .1em;
-  i {
-    margin-left: 2.4%;
-    @include fzvw(24);
-    letter-spacing: 0;
-  }
-}
 
 //h4
 
@@ -37,48 +31,69 @@
 //h6
 
 //p
+.index .intro .p_01 {
+  @include fzvw(25);
+  line-height: 1.6;
+  letter-spacing: .12em;
+  text-align: center;
+}
+.index .intro .p_01 {
+  @include fzvw(22);
+  line-height: 1.6;
+  letter-spacing: .12em;
+  text-align: center;
+}
 
-//time
+//div
+.index .intro .div_01 {
+  width: 100%;
+  text-align: center;
+  border: 1.6vw solid $c-grey;
+  a {
+    display: block;
+    padding: 5% 0;
+    @include fzvw(25);
+    line-height: 1;
+    letter-spacing: .12em;
+  }
+  p {
+    padding: 5% 5% 10%;
+    @include fzvw(18);
+    line-height: 1.6;
+    letter-spacing: .12em;
+    text-align: center;
+  }
+}
 
 //time
 
 //ul
-.index .topics ul {
-  li {
-    border-right: 1px solid $c-lightgreen;
-    padding: 1.2%;
-    width: 100%;
-    background-color: $c-white;
-    &:nth-child(n+2) {
-      margin-top: 2.4%;
-    }
-    a {
-      display: block;
-      figure {
-        display: inline-block;
-        vertical-align: top;
-        width: 36%;
-      }
-      > div {
-        display: inline-block;
-        vertical-align: top;
-        padding-left: 3.6%;
-        width: 62%;
-        time {
-          @include fzvw(18);
-          line-height: 1;
-          color: $c-grey;
-        }
-        p {
-          margin-top: 3.6%;
-          @include fzvw(20);
-          line-height: 1.3;
-        }
-      }
-    }
-  }
-}
 
 //dl
 
 //table
+.index .summary .table_01 {
+  @media only screen and (max-width: $break-tb) {
+    text-align: center;
+    tr {
+      display: block;
+      th {
+        font-weight: bold;
+        display: list-item;
+        @include fzvw(25);
+        line-height: 1;
+      }
+      td {
+        display: list-item;
+        @include fzvw(25);
+        line-height: 1;
+      }
+    }
+  }
+  @media only screen and (min-width: $break-tb) and (max-width: $break-pc) {
+    display: none;
+  }
+  @media only screen and (min-width: $break-pc) {
+    display: none;
+  }
+}
