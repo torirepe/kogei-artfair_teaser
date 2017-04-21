@@ -3,11 +3,55 @@
 .index .summary .h2_01,
 .index .entry .h2_01 {
   position: relative;
-  padding-bottom: 15.6%;
   text-align: center;
-  font-size: 0;
-  @include fzvw(48);
   font-weight: normal;
+  line-height: 1;
+  letter-spacing: .12em;
+  @include mq(sp) {
+    @include fzvw(48);
+    padding-bottom: 15.6%;
+  }
+  @include mq(tb) {
+    font-size: 32px;
+    padding-bottom: 66px;
+  }
+  @include mq(pc) {
+    font-size: 32px;
+    padding-bottom: 66px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: $c-black;
+    @include mq(sp) {
+      left: 50%;
+      margin-left: -21%;
+      padding-bottom: 3.5%;
+      width: 41%;
+    }
+    @include mq(tb) {
+      left: 50%;
+      margin-left: -94px;
+      padding-bottom: 14px;
+      width: 188px;
+    }
+    @include mq(pc) {
+      left: 50%;
+      margin-left: -94px;
+      padding-bottom: 14px;
+      width: 188px;
+    }
+  }
+}
+
+//h3
+.index .entry .h3_01 {
+  position: relative;
+  padding-bottom: 12%;
+  text-align: center;
+  @include fzvw(30);
   line-height: 1;
   &:after {
     content: '';
@@ -15,14 +59,12 @@
     bottom: 0;
     left: 50%;
     display: block;
-    margin-left: -21%;
-    padding-bottom: 3.5%;
-    width: 41%;
-    background-color: $c-black;
+    margin-left: -15.4%;
+    padding-bottom: 2.8%;
+    width: 30.8%;
+    background-color: $c-grey;
   }
 }
-
-//h3
 
 //h4
 
@@ -32,15 +74,32 @@
 
 //p
 .index .intro .p_01 {
-  @include fzvw(25);
+  letter-spacing: .12em;
+  text-align: center;
+  @include mq(sp) {
+    line-height: 1.6;
+    @include fzvw(25);
+  }
+  @include mq(tb) {
+    line-height: 1.9;
+    font-size: 16px;
+  }
+  @include mq(pc) {
+    line-height: 1.9;
+    font-size: 18px;
+  }
+}
+.index .entry .p_01 {
+  @include fzvw(28);
   line-height: 1.6;
   letter-spacing: .12em;
   text-align: center;
 }
-.index .intro .p_01 {
-  @include fzvw(22);
+.index .entry .p_02 {
+  font-family: $f-crimson;
+  @include fzvw(25);
   line-height: 1.6;
-  letter-spacing: .12em;
+  letter-spacing: .08em;
   text-align: center;
 }
 
@@ -64,6 +123,48 @@
     text-align: center;
   }
 }
+.index .entry .div_01 {
+  width: 100%;
+  text-align: center;
+  border: 1.6vw solid $c-grey;
+  background-size: 10% auto;
+  a {
+    position: relative;
+    display: block;
+    background: #f4f4f5;
+    padding: 8.6% 0;
+    font-family: $f-crimson;
+    @include fzvw(28);
+    line-height: 1.6;
+    &:before {
+      content: '';
+      display: block;
+      margin: 0 auto 4.8%;
+      width: 10%;
+      padding-bottom: 14.8%;
+      background: url(../images/icon_dl.png) no-repeat center top;
+      background-size: contain;
+    }
+    i {
+      display: block;
+      margin-top: 4.8%;
+      @include fzvw(24);
+      line-height: 1;
+    }
+  }
+}
+.index .entry .div_02 {
+  text-align: center;
+  font-family: $f-crimson;
+  @include fzvw(30);
+  line-height: 1;
+  letter-spacing: .12em;
+  a {
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 1px solid $c-black;
+  }
+}
 
 //time
 
@@ -73,27 +174,51 @@
 
 //table
 .index .summary .table_01 {
-  @media only screen and (max-width: $break-tb) {
-    text-align: center;
+  @include mq(sp) {
     tr {
+      margin-top: 3.6%;
       display: block;
+      &:nth-child(n+2) {
+        th {
+          margin-top: 6%;
+        }
+      }
       th {
+        text-align: center;
         font-weight: bold;
         display: list-item;
         @include fzvw(25);
-        line-height: 1;
+        line-height: 1.4;
       }
       td {
+        text-align: center;
         display: list-item;
         @include fzvw(25);
-        line-height: 1;
+        line-height: 1.4;
+        ul {
+          @include fzvw(20);
+          line-height: 1.2;
+          li {
+            margin-top: 2.4%;
+          }
+        }
       }
     }
   }
-  @media only screen and (min-width: $break-tb) and (max-width: $break-pc) {
+  @include mq(tb) {
     display: none;
   }
-  @media only screen and (min-width: $break-pc) {
+  @include mq(pc) {
     display: none;
+  }
+}
+//address
+.index .entry .address_01 {
+  text-align: center;
+  @include fzvw(20);
+  line-height: 1.4;
+  letter-spacing: .06em;
+  a {
+    font-family: $f-crimson;
   }
 }

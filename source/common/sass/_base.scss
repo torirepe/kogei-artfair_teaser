@@ -18,36 +18,21 @@ img {
   width: 100%;
 }
 .sp {
-  @media only screen and (max-width: $break-tb) {
-    display: block;
-  }
-  @media only screen and (min-width: $break-tb) and (max-width: $break-pc) {
-    display: none;
-  }
-  @media only screen and (min-width: $break-pc) {
-    display: none;
+  display: none;
+  @include mq(sp) {
+    display: block !important;
   }
 }
 .tb {
-  @media only screen and (max-width: $break-tb) {
-    display: none;
-  }
-  @media only screen and (min-width: $break-tb) and (max-width: $break-pc) {
-    display: block;
-  }
-  @media only screen and (min-width: $break-pc) {
-    display: none;
+  display: none;
+  @include mq(tb) {
+    display: block !important;
   }
 }
 .pc {
-  @media only screen and (max-width: $break-tb) {
-    display: none;
-  }
-  @media only screen and (min-width: $break-tb) and (max-width: $break-pc) {
-    display: none;
-  }
-  @media only screen and (min-width: $break-pc) {
-    display: block;
+  display: none;
+  @include mq(pc) {
+    display: block !important;
   }
 }
 /* /global */
@@ -60,35 +45,76 @@ img {
 
 /* header */
 #header {
-  padding: 37.5% 5% 0;
-  width: 100%;
+  @include mq(sp) {
+    padding: 37.5% 5% 0;
+    width: 100%;
+  }
+  @include mq(tb) {
+    padding: 150px 5% 0;
+    width: 100%;
+  }
+  @include mq(pc) {
+    margin: 0 auto;
+    padding: 196px 0 0 0;
+    min-width: 860px;
+    max-width: 1030px;
+    width: 100%;
+  }
   h1 {
+    margin: 0 auto;
+    @include mq(sp) {
+      width: 100%;
+    }
+    @include mq(tb) {
+      width: 380px;
+    }
+    @include mq(pc) {
+      width: 560px;
+    }
   }
   time {
     position: relative;
-    margin-top: 15.6%;
     width: 100%;
     text-align: center;
     font-family: $f-crimson;
-    @include fzvw(44);
     font-weight: 600;
     line-height: 1;
+    @include mq(sp) {
+      margin-top: 15.6%;
+      @include fzvw(44);
+    }
+    @include mq(tb) {
+      margin-top: 50px;
+      font-size: 24px;
+    }
+    @include mq(pc) {
+      margin-top: 70px;
+      font-size: 36px;
+    }
     &:after {
       content: '';
       display: block;
       position: absolute;
       top: 60%;
       left: 50%;
-      margin-left: -.75em;
-      width: 1.4em;
+      margin-left: -.7em;
+      width: 1.2em;
       height: 1px;
       background-color: $c-black;
       transform: rotate(-10deg);
       transform-origin: center center;
     }
     i {
-      @include fzvw(30);
       letter-spacing: .06em;
+      @include mq(sp) {
+        @include fzvw(30);
+      }
+      @include mq(tb) {
+        font-size: 16px;
+      }
+      @include mq(pc) {
+        font-size: 24px;
+      }
     }
   }
   p {
@@ -99,14 +125,22 @@ img {
     }
   }
   nav {
-    margin-top: 23.4%;
+    @include mq(sp) {
+      margin-top: 23.4%;
+    }
+    @include mq(tb) {
+      margin-top: 120px;
+    }
+    @include mq(pc) {
+      margin-top: 150px;
+    }
   }
   ul {
     li {
       display: inline-block;
       vertical-align: top;
       background-color: $c-black;
-      @media only screen and (max-width: $break-tb) {
+      @include mq(sp) {
         width: 49%;
         &:nth-child(2n) {
           margin-left: 2%;
@@ -115,15 +149,36 @@ img {
           margin-top: 2%;
         }
       }
+      @include mq(tb) {
+        width: 49.5%;
+        &:nth-child(2n) {
+          margin-left: 1%;
+        }
+        &:nth-child(n+3) {
+          margin-top: 1%;
+        }
+      }
+      @include mq(pc) {
+        width: 25%;
+      }
       a {
         display: block;
-        padding: 10% 0;
         text-align: center;
         line-height: 1;
-        @include fzvw(24);
         color: $c-white;
-        @media only screen and (min-width: $break-pc) {
-          &:hover{
+        @include mq(sp) {
+          padding: 10% 0;
+          @include fzvw(24);
+        }
+        @include mq(tb) {
+          padding: 14px 0;
+          font-size: 18px;
+        }
+        @include mq(pc) {
+          padding: 10px 0;
+          font-size: 14px;
+          &:hover {
+            background-color: #808080;
           }
         }
       }
@@ -143,6 +198,44 @@ img {
 
 /* footer */
 #footer {
-  
+  margin-top: 24%;
+  dl {
+    background-color: $c-black;
+    padding: 14% 5%;
+    font-family: $f-sans;
+    @include fzvw(20);
+    color: #fff;
+    line-height: 1.6;
+    dt {
+      &:nth-child(n+2) {
+        margin-top: 4.8%;
+      }
+    }
+  }
+  div {
+    a {
+      position: relative;
+      display: block;
+      padding: 6% 0;
+      text-align: center;
+      font-family: $f-crimson;
+      font-weight: 600;
+      @include fzvw(30);
+      line-height: 1;
+      list-style-position: .12em;
+      &:before{
+        content: '';
+        display: block;
+        margin: 0 auto 2%;
+        border-top: 2px solid $c-grey;
+        border-right: 2px solid $c-grey;
+        width: .6em;
+        height: .6em;
+        transform: rotate(-45deg);
+      }
+      &:hover{
+      }
+    }
+  }
 }
 /* /footer */
