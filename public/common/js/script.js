@@ -1,7 +1,10 @@
 $(function(){
   //extensionBox
   $(document).on('click','#extensionBox a', function(){
-    $('#extensionBox').toggleClass("active");
+    var ah = $('#extensionBox a').innerHeight();
+    var ph = $('#extensionBox p').innerHeight();
+    $('#extensionBox').height(ah + ph);
+    $('#extensionBox').toggleClass('active');
   });
   
   //href #

@@ -177,7 +177,7 @@ body
     position: relative;
 
     letter-spacing: 0;
-    word-break: break-all;
+    word-wrap: break-word;
 
     color: #221714; 
 
@@ -1897,11 +1897,66 @@ img
     font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
 }
 
+#extensionBox
+{
+    position: relative;
+
+    -webkit-transition: all .24s ease;
+            transition: all .24s ease;
+}
 #extensionBox p
 {
-    display: none;
-}
+    position: absolute;
 
+    width: 100%;
+
+    -webkit-transition: all .24s ease;
+            transition: all .24s ease; 
+
+    opacity: 0;
+}
+@media screen and (max-width: 425px)
+{
+    #extensionBox p
+    {
+        top: 15vw !important;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #extensionBox p
+    {
+        top: 78px !important;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #extensionBox p
+    {
+        top: 78px !important;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    #extensionBox:not(.active)
+    {
+        height: 15vw !important;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #extensionBox:not(.active)
+    {
+        height: 78px !important;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #extensionBox:not(.active)
+    {
+        height: 78px !important;
+    }
+}
 #extensionBox.active
 {
     width: 100%;
@@ -1909,6 +1964,11 @@ img
 #extensionBox.active p
 {
     display: block;
+
+    -webkit-transition-delay: .24s;
+            transition-delay: .24s; 
+
+    opacity: 1;
 }
 
 body

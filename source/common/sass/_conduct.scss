@@ -1,12 +1,39 @@
 //extensionBox
 #extensionBox {
+  position: relative;
+  transition: all .24s ease;
   p {
-    display: none;
+    position: absolute;
+    @include mq(sp) {
+      top: 15vw !important;
+    }
+    @include mq(tb) {
+      top: 78px !important;
+    }
+    @include mq(pc) {
+      top: 78px !important;
+    }
+    width: 100%;
+    opacity: 0;
+    transition: all .24s ease;
+  }
+  &:not(.active) {
+    @include mq(sp) {
+      height: 15vw !important;
+    }
+    @include mq(tb) {
+      height: 78px !important;
+    }
+    @include mq(pc) {
+      height: 78px !important;
+    }
   }
   &.active {
     width: 100%;
     p {
       display: block;
+      opacity: 1;
+      transition-delay: .24s;
     }
   }
 }
