@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
+  position: relative;
   font-family: $f-serif;
   font-size: 0;
   letter-spacing: 0;
@@ -38,9 +39,82 @@ img {
 /* /global */
 
 
-/* wrapper */
-#wrapper {}
-/* /wrapper */
+/* language */
+#language {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+  background-color: $c-black;
+  cursor: pointer;
+  pointer-events: all;
+  @include mq(sp) {
+    margin: 2.5vw 2.5vw 0 0;
+    border: 1.6vw solid $c-black;
+    width: 32vw;
+  }
+  @include mq(tb) {
+    margin: 26px 26px 0 0;
+    border: 5px solid $c-black;
+    width: 110px;
+  }
+  @include mq(pc) {
+    margin: 26px 26px 0 0;
+    border: 5px solid $c-black;
+    width: 110px;
+  }
+  &:before {
+    content: 'JP';
+    position: absolute;
+    top: 0;
+    left: 18%;
+    line-height: 1.8;
+    font-family: $f-crimson;
+    font-weight: 700;
+    color: $c-black;
+    z-index: 2;
+    @include mq(sp) {
+      @include fzvw(26);
+    }
+    @include mq(tb) {
+      font-size: 14px;
+    }
+    @include mq(pc) {
+      font-size: 14px;
+    }
+  }
+  &:after {
+    content: 'EN';
+    position: absolute;
+    top: 0;
+    right: 17%;
+    line-height: 1.8;
+    font-family: $f-crimson;
+    font-weight: 700;
+    @include fzvw(26);
+    color: $c-white;
+    z-index: 2;
+    @include mq(sp) {
+      @include fzvw(26);
+    }
+    @include mq(tb) {
+      font-size: 14px;
+    }
+    @include mq(pc) {
+      font-size: 14px;
+    }
+  }
+  span  {
+    position: relative;
+    display: block;
+    border-radius: 20% 20% 20% 20% / 50% 50% 50% 50%;
+    padding-bottom: 20%;
+    width: 50%;
+    background-color: $c-white;
+    z-index: 1;
+  }
+}
+/* /language */
 
 
 /* header */
@@ -175,8 +249,9 @@ img {
           font-size: 18px;
         }
         @include mq(pc) {
-          padding: 10px 0;
+          padding: 11px 0;
           font-size: 14px;
+          font-weight: 600;
           &:hover {
             background-color: #808080;
           }
@@ -190,48 +265,143 @@ img {
 
 /* main */
 #main {
-  width: 100%;
-  padding: 0 5%;
+  @include mq(sp) {
+    padding: 0 5%;
+    width: 100%;
+  }
+  @include mq(tb) {
+    padding: 0 5%;
+    width: 100%;
+  }
+  @include mq(pc) {
+    margin: 0 auto;
+    width: 860px;
+  }
 }
 /* /main */
 
 
 /* footer */
 #footer {
-  margin-top: 24%;
+  background-color: $c-black;
+  @include mq(sp) {
+    margin-top: 24%;
+  }
+  @include mq(tb) {
+    margin-top: 180px;
+  }
+  @include mq(pc) {
+    margin-top: 180px;
+  }
   dl {
-    background-color: $c-black;
-    padding: 14% 5%;
+    margin: 0 auto;
     font-family: $f-sans;
-    @include fzvw(20);
     color: #fff;
     line-height: 1.6;
+    @include mq(sp) {
+      padding: 14% 5%;
+    }
+    @include mq(tb) {
+      padding: 70px 5%;
+      width: 100%;
+    }
+    @include mq(pc) {
+      padding: 70px 0;
+      width: 860px;
+    }
+    dt,
+    dd {
+      display: inline-block;
+      vertical-align: top;
+      @include mq(sp) {
+        @include fzvw(20);
+      }
+      @include mq(tb) {
+        font-size: 14px;
+      }
+      @include mq(pc) {
+        font-size: 14px;
+      }
+    }
     dt {
+      @include mq(sp) {
+        width: 100%;
+      }
+      @include mq(tb) {
+        width: 100%;
+      }
+      @include mq(pc) {
+        width: 106px;
+      }
       &:nth-child(n+2) {
-        margin-top: 4.8%;
+        @include mq(sp) {
+          margin-top: 4.8%;
+        }
+        @include mq(tb) {
+          margin-top: 32px;
+        }
+        @include mq(pc) {
+          margin-top: 32px;
+        }
+      }
+    }
+    dd {
+      @include mq(sp) {
+        width: 100%;
+        @include fzvw(20);
+      }
+      @include mq(tb) {
+        width: 100%;
+        font-size: 14px;
+      }
+      @include mq(pc) {
+        width: 754px;
+        font-size: 14px;
+        &:nth-child(n+3) {
+          margin-top: 32px;
+        }
       }
     }
   }
   div {
+    background-color: $c-white;
     a {
       position: relative;
       display: block;
-      padding: 6% 0;
       text-align: center;
       font-family: $f-crimson;
       font-weight: 600;
-      @include fzvw(30);
       line-height: 1;
-      list-style-position: .12em;
+      letter-spacing: .12em;
+      @include mq(sp) {
+        padding: 6% 0;
+        @include fzvw(30);
+      }
+      @include mq(tb) {
+        padding: 26px 0 40px;
+        font-size: 30px;
+      }
+      @include mq(pc) {
+        padding: 26px 0 40px;
+        font-size: 30px;
+      }
       &:before{
         content: '';
         display: block;
-        margin: 0 auto 2%;
         border-top: 2px solid $c-grey;
         border-right: 2px solid $c-grey;
         width: .6em;
         height: .6em;
         transform: rotate(-45deg);
+        @include mq(sp) {
+          margin: 0 auto 2%;
+        }
+        @include mq(tb) {
+          margin: 0 auto 4px;
+        }
+        @include mq(pc) {
+          margin: 0 auto 4px;
+        }
       }
       &:hover{
       }

@@ -1,26 +1,134 @@
-.index .intro,
-.index .summary,
-.index .entry {
-  margin-top: 28%;
-}
-.index .entry .h3_01 {
-  margin-top: 23%;
-}
-.index .intro .div_01 {
-  margin-top: 20%;
-}
-.index .summary .table_01,
-.index .entry .p_01 {
-  margin-top: 13.7%;
-}
-.index .intro .p_01,
-.index .entry .div_01,
-  .index .entry .div_02 {
-  margin-top: 12.6%;
-}
-.index .entry .p_02 {
-  margin-top: 10%;
-}
-.index .entry .address_01 {
-  margin-top: 6%;
+.index {
+  .intro {
+    @include mq(sp) {
+      padding-top: 28%;
+    }
+    @include mq(tb) {
+      padding-top: 180px;
+    }
+    @include mq(pc) {
+      padding-top: 180px;
+    }
+    .p_01 {
+      @include mq(sp) {
+        margin-top: 12.6%;
+      }
+      @include mq(tb) {
+        margin-top: 60px;
+      }
+      @include mq(pc) {
+        margin-top: 60px;
+      }
+    }
+    .div_01 {
+      @include mq(sp) {
+        margin: 20% auto 0;
+      }
+      @include mq(tb) {
+        margin: 68px auto 0;
+      }
+      @include mq(pc) {
+        margin: 68px auto 0;
+      }
+    }
+  }
+  .summary {
+    @include mq(sp) {
+      padding-top: 28%;
+    }
+    @include mq(tb) {
+      padding-top: 180px;
+    }
+    @include mq(pc) {
+      padding-top: 180px;
+    }
+    .table_01 {
+      @include mq(sp) {
+        margin: 13.7% auto 0;
+      }
+      @include mq(tb) {
+        margin: 60px auto 0;
+      }
+      @include mq(pc) {
+        margin: 60px auto 0;
+      }
+    }
+  }
+  .entry {
+    @include mq(sp) {
+      padding-top: 28%;
+    }
+    @include mq(tb) {
+      padding-top: 180px;
+    }
+    @include mq(pc) {
+      padding-top: 180px;
+    }
+    .p_01 {
+      @include mq(sp) {
+        margin-top: 13.7%;
+      }
+      @include mq(tb) {
+        margin-top: 86px;
+      }
+      @include mq(pc) {
+        margin-top: 86px;
+      }
+    }
+    .div_01 {
+      @include mq(sp) {
+        margin: 12.6% auto 0;
+      }
+      @include mq(tb) {
+        margin: 60px auto 0;
+      }
+      @include mq(pc) {
+        margin: 60px auto 0;
+      }
+    }
+  }
+  .contact {
+    @include mq(sp) {
+      padding-top: 23%;
+    }
+    @include mq(tb) {
+      padding-top: 96px;
+    }
+    @include mq(pc) {
+      padding-top: 96px;
+    }
+    .p_01 {
+      @include mq(sp) {
+        margin-top: 10%;
+      }
+      @include mq(tb) {
+        margin-top: 30px;
+      }
+      @include mq(pc) {
+        margin-top: 30px;
+      }
+    }
+    .address_01 {
+      @include mq(sp) {
+        margin-top: 10%;
+      }
+      @include mq(tb) {
+        margin-top: 30px;
+      }
+      @include mq(pc) {
+        margin-top: 30px;
+      }
+    }
+    .div_01 {
+      @include mq(sp) {
+        margin: 12.6% auto 0;
+      }
+      @include mq(tb) {
+        margin: 60px auto 0;
+      }
+      @include mq(pc) {
+        margin: 60px auto 0;
+      }
+    }
+  }
 }

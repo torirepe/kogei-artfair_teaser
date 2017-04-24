@@ -1,0 +1,38 @@
+//extensionBox
+#extensionBox {
+  p {
+    display: none;
+  }
+  &.active {
+    width: 100%;
+    p {
+      display: block;
+    }
+  }
+}
+
+//jp en
+body {
+  min-height: 150vh;
+  #language {
+    span {
+      transition: all .36s ease;
+    }
+  }
+  &.en {
+    #language {
+      &:before {
+        color: $c-white;
+      }
+      &:after {
+        color: $c-black;
+      }
+      span {
+        transform: translateX(100%);
+      }
+    }
+  }
+  &.loading #wrapper {
+    opacity: 0;
+  }
+}

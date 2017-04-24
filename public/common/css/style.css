@@ -174,6 +174,8 @@ body
     font-size: 0;
     line-height: 0;
 
+    position: relative;
+
     letter-spacing: 0;
     word-break: break-all;
 
@@ -227,8 +229,137 @@ img
 }
 
 /* /global */
-/* wrapper */
-/* /wrapper */
+/* language */
+#language
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+    pointer-events: all; 
+
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+    background-color: #221714;
+}
+@media screen and (max-width: 425px)
+{
+    #language
+    {
+        width: 32vw; 
+        margin: 2.5vw 2.5vw 0 0;
+
+        border: 1.6vw solid #221714;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #language
+    {
+        width: 110px; 
+        margin: 26px 26px 0 0;
+
+        border: 5px solid #221714;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #language
+    {
+        width: 110px; 
+        margin: 26px 26px 0 0;
+
+        border: 5px solid #221714;
+    }
+}
+#language:before
+{
+    font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
+    font-weight: 700;
+    line-height: 1.8;
+
+    position: absolute;
+    z-index: 2; 
+    top: 0;
+    left: 18%;
+
+    content: 'JP';
+
+    color: #221714;
+}
+@media screen and (max-width: 425px)
+{
+    #language:before
+    {
+        font-size: 4.0625vw;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #language:before
+    {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #language:before
+    {
+        font-size: 14px;
+    }
+}
+#language:after
+{
+    font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
+    font-size: 4.0625vw;
+    font-weight: 700;
+    line-height: 1.8;
+
+    position: absolute;
+    z-index: 2; 
+    top: 0;
+    right: 17%;
+
+    content: 'EN';
+
+    color: #fff;
+}
+@media screen and (max-width: 425px)
+{
+    #language:after
+    {
+        font-size: 4.0625vw;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #language:after
+    {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #language:after
+    {
+        font-size: 14px;
+    }
+}
+#language span
+{
+    position: relative;
+    z-index: 1; 
+
+    display: block;
+
+    width: 50%;
+    padding-bottom: 20%;
+
+    border-radius: 20% 20% 20% 20% / 50% 50% 50% 50%;
+    background-color: #fff;
+}
+
+/* /language */
 /* header */
 @media screen and (max-width: 425px)
 {
@@ -484,9 +615,10 @@ img
 {
     #header ul li a
     {
-        font-size: 14px; 
+        font-size: 14px;
+        font-weight: 600; 
 
-        padding: 10px 0;
+        padding: 11px 0;
     }
     #header ul li a:hover
     {
@@ -496,37 +628,203 @@ img
 
 /* /header */
 /* main */
-#main
+@media screen and (max-width: 425px)
 {
-    width: 100%;
-    padding: 0 5%;
+    #main
+    {
+        width: 100%; 
+        padding: 0 5%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #main
+    {
+        width: 100%; 
+        padding: 0 5%;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    #main
+    {
+        width: 860px; 
+        margin: 0 auto;
+    }
 }
 
 /* /main */
 /* footer */
 #footer
 {
-    margin-top: 24%;
+    background-color: #221714;
+}
+@media screen and (max-width: 425px)
+{
+    #footer
+    {
+        margin-top: 24%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer
+    {
+        margin-top: 180px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer
+    {
+        margin-top: 180px;
+    }
 }
 #footer dl
 {
     font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', '游ゴシック', YuGothic, 'Meiryo', sans-serif;
-    font-size: 3.125vw;
     line-height: 1.6; 
 
-    padding: 14% 5%;
+    margin: 0 auto;
 
     color: #fff;
-    background-color: #221714;
 }
-#footer dl dt:nth-child(n+2)
+@media screen and (max-width: 425px)
 {
-    margin-top: 4.8%;
+    #footer dl
+    {
+        padding: 14% 5%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer dl
+    {
+        width: 100%; 
+        padding: 70px 5%;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer dl
+    {
+        width: 860px; 
+        padding: 70px 0;
+    }
+}
+#footer dl dt,
+#footer dl dd
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+@media screen and (max-width: 425px)
+{
+    #footer dl dt,
+    #footer dl dd
+    {
+        font-size: 3.125vw;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer dl dt,
+    #footer dl dd
+    {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer dl dt,
+    #footer dl dd
+    {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    #footer dl dt
+    {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer dl dt
+    {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer dl dt
+    {
+        width: 106px;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    #footer dl dt:nth-child(n+2)
+    {
+        margin-top: 4.8%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer dl dt:nth-child(n+2)
+    {
+        margin-top: 32px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer dl dt:nth-child(n+2)
+    {
+        margin-top: 32px;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    #footer dl dd
+    {
+        font-size: 3.125vw; 
+
+        width: 100%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer dl dd
+    {
+        font-size: 14px; 
+
+        width: 100%;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer dl dd
+    {
+        font-size: 14px; 
+
+        width: 754px;
+    }
+    #footer dl dd:nth-child(n+3)
+    {
+        margin-top: 32px;
+    }
+}
+#footer div
+{
+    background-color: #fff;
 }
 #footer div a
 {
     font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
-    font-size: 4.6875vw;
     font-weight: 600;
     line-height: 1;
 
@@ -534,11 +832,35 @@ img
 
     display: block;
 
-    padding: 6% 0;
-
-    list-style-position: .12em; 
-
     text-align: center;
+    letter-spacing: .12em;
+}
+@media screen and (max-width: 425px)
+{
+    #footer div a
+    {
+        font-size: 4.6875vw; 
+
+        padding: 6% 0;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer div a
+    {
+        font-size: 30px; 
+
+        padding: 26px 0 40px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer div a
+    {
+        font-size: 30px; 
+
+        padding: 26px 0 40px;
+    }
 }
 #footer div a:before
 {
@@ -546,7 +868,6 @@ img
 
     width: .6em;
     height: .6em;
-    margin: 0 auto 2%;
 
     content: '';
     -webkit-transform: rotate(-45deg);
@@ -556,46 +877,315 @@ img
     border-top: 2px solid #949494;
     border-right: 2px solid #949494;
 }
+@media screen and (max-width: 425px)
+{
+    #footer div a:before
+    {
+        margin: 0 auto 2%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    #footer div a:before
+    {
+        margin: 0 auto 4px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    #footer div a:before
+    {
+        margin: 0 auto 4px;
+    }
+}
 
 /* /footer */
-.index .intro,
-.index .summary,
-.index .entry
+@media screen and (max-width: 425px)
 {
-    margin-top: 28%;
+    .index .intro
+    {
+        padding-top: 28%;
+    }
 }
 
-.index .entry .h3_01
+@media screen and (min-width: 426px) and (max-width: 768px)
 {
-    margin-top: 23%;
+    .index .intro
+    {
+        padding-top: 180px;
+    }
 }
 
-.index .intro .div_01
+@media screen and (min-width: 769px)
 {
-    margin-top: 20%;
+    .index .intro
+    {
+        padding-top: 180px;
+    }
 }
 
-.index .summary .table_01,
-.index .entry .p_01
+@media screen and (max-width: 425px)
 {
-    margin-top: 13.7%;
+    .index .intro .p_01
+    {
+        margin-top: 12.6%;
+    }
 }
 
-.index .intro .p_01,
-.index .entry .div_01,
-.index .entry .div_02
+@media screen and (min-width: 426px) and (max-width: 768px)
 {
-    margin-top: 12.6%;
+    .index .intro .p_01
+    {
+        margin-top: 60px;
+    }
 }
 
-.index .entry .p_02
+@media screen and (min-width: 769px)
 {
-    margin-top: 10%;
+    .index .intro .p_01
+    {
+        margin-top: 60px;
+    }
 }
 
-.index .entry .address_01
+@media screen and (max-width: 425px)
 {
-    margin-top: 6%;
+    .index .intro .div_01
+    {
+        margin: 20% auto 0;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .intro .div_01
+    {
+        margin: 68px auto 0;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .intro .div_01
+    {
+        margin: 68px auto 0;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .summary
+    {
+        padding-top: 28%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .summary
+    {
+        padding-top: 180px;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .summary
+    {
+        padding-top: 180px;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .summary .table_01
+    {
+        margin: 13.7% auto 0;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .summary .table_01
+    {
+        margin: 60px auto 0;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .summary .table_01
+    {
+        margin: 60px auto 0;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .entry
+    {
+        padding-top: 28%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry
+    {
+        padding-top: 180px;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .entry
+    {
+        padding-top: 180px;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .entry .p_01
+    {
+        margin-top: 13.7%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry .p_01
+    {
+        margin-top: 86px;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .entry .p_01
+    {
+        margin-top: 86px;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .entry .div_01
+    {
+        margin: 12.6% auto 0;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry .div_01
+    {
+        margin: 60px auto 0;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .entry .div_01
+    {
+        margin: 60px auto 0;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .contact
+    {
+        padding-top: 23%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact
+    {
+        padding-top: 96px;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .contact
+    {
+        padding-top: 96px;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .contact .p_01
+    {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .p_01
+    {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .contact .p_01
+    {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .contact .address_01
+    {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .address_01
+    {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .contact .address_01
+    {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .index .contact .div_01
+    {
+        margin: 12.6% auto 0;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .div_01
+    {
+        margin: 60px auto 0;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .index .contact .div_01
+    {
+        margin: 60px auto 0;
+    }
 }
 
 .index .intro .h2_01,
@@ -696,18 +1286,42 @@ img
     }
 }
 
-.index .entry .h3_01
+.index .contact .h3_01
 {
-    font-size: 4.6875vw;
     line-height: 1; 
 
     position: relative;
 
-    padding-bottom: 12%;
-
     text-align: center;
 }
-.index .entry .h3_01:after
+@media screen and (max-width: 425px)
+{
+    .index .contact .h3_01
+    {
+        font-size: 4.6875vw; 
+
+        padding-bottom: 12%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .h3_01
+    {
+        font-size: 24px; 
+
+        padding-bottom: 40px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .contact .h3_01
+    {
+        font-size: 24px; 
+
+        padding-bottom: 40px;
+    }
+}
+.index .contact .h3_01:after
 {
     position: absolute;
     bottom: 0;
@@ -715,13 +1329,36 @@ img
 
     display: block;
 
-    width: 30.8%;
-    margin-left: -15.4%;
-    padding-bottom: 2.8%;
-
     content: '';
 
     background-color: #949494;
+}
+@media screen and (max-width: 425px)
+{
+    .index .contact .h3_01:after
+    {
+        width: 30.8%; 
+        margin-left: -15.4%;
+        padding-bottom: 2.8%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .h3_01:after
+    {
+        width: 94px; 
+        margin-left: -47px;
+        padding-bottom: 6px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .contact .h3_01:after
+    {
+        width: 94px; 
+        margin-left: -47px;
+        padding-bottom: 6px;
+    }
 }
 
 .index .intro .p_01
@@ -756,45 +1393,135 @@ img
 
 .index .entry .p_01
 {
-    font-size: 4.375vw;
     line-height: 1.6;
 
     text-align: center; 
     letter-spacing: .12em;
 }
+@media screen and (max-width: 425px)
+{
+    .index .entry .p_01
+    {
+        font-size: 4.375vw;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry .p_01
+    {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .entry .p_01
+    {
+        font-size: 20px;
+    }
+}
 
-.index .entry .p_02
+.index .contact .p_01
 {
     font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
-    font-size: 3.90625vw;
     line-height: 1.6;
 
     text-align: center; 
     letter-spacing: .08em;
 }
+@media screen and (max-width: 425px)
+{
+    .index .contact .p_01
+    {
+        font-size: 3.90625vw;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .p_01
+    {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .contact .p_01
+    {
+        font-size: 18px;
+    }
+}
 
 .index .intro .div_01
 {
-    width: 100%;
-
     text-align: center;
+}
+@media screen and (max-width: 425px)
+{
+    .index .intro .div_01
+    {
+        width: 100%; 
 
-    border: 1.6vw solid #949494;
+        border: 1.6vw solid #949494;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .intro .div_01
+    {
+        width: 100%; 
+
+        border: 10px solid #949494;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .intro .div_01
+    {
+        width: 496px; 
+
+        border: 10px solid #949494;
+    }
 }
 .index .intro .div_01 a
 {
-    font-size: 3.90625vw;
     line-height: 1;
 
     display: block;
 
-    padding: 5% 0;
-
     letter-spacing: .12em;
+}
+@media screen and (max-width: 425px)
+{
+    .index .intro .div_01 a
+    {
+        font-size: 3.90625vw; 
+
+        padding: 5% 0;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .intro .div_01 a
+    {
+        font-size: 18px; 
+
+        padding: 20px 0;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .intro .div_01 a
+    {
+        font-size: 18px; 
+
+        padding: 20px 0;
+    }
+    .index .intro .div_01 a:hover
+    {
+        text-decoration: underline;
+    }
 }
 .index .intro .div_01 p
 {
-    font-size: 2.8125vw;
     line-height: 1.6;
 
     padding: 5% 5% 10%;
@@ -802,63 +1529,203 @@ img
     text-align: center; 
     letter-spacing: .12em;
 }
+@media screen and (max-width: 425px)
+{
+    .index .intro .div_01 p
+    {
+        font-size: 3.90625vw; 
+
+        padding: 5% 5% 10%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .intro .div_01 p
+    {
+        font-size: 15px; 
+
+        padding: 30px 0 60px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .intro .div_01 p
+    {
+        font-size: 15px; 
+
+        padding: 30px 0 60px;
+    }
+}
 
 .index .entry .div_01
 {
-    width: 100%;
-
     text-align: center;
+}
+@media screen and (max-width: 425px)
+{
+    .index .entry .div_01
+    {
+        width: 100%; 
 
-    border: 1.6vw solid #949494;
-    background-size: 10% auto;
+        border: 1.6vw solid #949494;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry .div_01
+    {
+        width: 100%; 
+
+        border: 10px solid #949494;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .entry .div_01
+    {
+        width: 534px; 
+
+        border: 10px solid #949494;
+    }
 }
 .index .entry .div_01 a
 {
     font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
-    font-size: 4.375vw;
     line-height: 1.6; 
 
     position: relative;
 
     display: block;
 
-    padding: 8.6% 0;
-
     background: #f4f4f5;
+}
+@media screen and (max-width: 425px)
+{
+    .index .entry .div_01 a
+    {
+        font-size: 4.375vw; 
+
+        padding: 8.6% 0;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry .div_01 a
+    {
+        font-size: 20px; 
+
+        padding: 24px 0 32px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .entry .div_01 a
+    {
+        font-size: 20px; 
+
+        padding: 24px 0 32px;
+    }
 }
 .index .entry .div_01 a:before
 {
     display: block;
-
-    width: 10%;
-    margin: 0 auto 4.8%;
-    padding-bottom: 14.8%;
 
     content: '';
 
     background: url(../images/icon_dl.png) no-repeat center top;
     background-size: contain;
 }
+@media screen and (max-width: 425px)
+{
+    .index .entry .div_01 a:before
+    {
+        width: 10%; 
+        margin: 0 auto 4.8%;
+        padding-bottom: 14.8%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry .div_01 a:before
+    {
+        width: 26px; 
+        margin: 0 auto 16px;
+        padding-bottom: 36px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .entry .div_01 a:before
+    {
+        width: 26px; 
+        margin: 0 auto 16px;
+        padding-bottom: 36px;
+    }
+}
 .index .entry .div_01 a i
 {
-    font-size: 3.75vw;
     line-height: 1; 
 
     display: block;
+}
+@media screen and (max-width: 425px)
+{
+    .index .entry .div_01 a i
+    {
+        font-size: 3.75vw; 
 
-    margin-top: 4.8%;
+        margin-top: 4.8%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .entry .div_01 a i
+    {
+        font-size: 16px; 
+
+        margin-top: 14px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .entry .div_01 a i
+    {
+        font-size: 16px; 
+
+        margin-top: 14px;
+    }
 }
 
-.index .entry .div_02
+.index .contact .div_01
 {
     font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
-    font-size: 4.6875vw;
     line-height: 1;
 
     text-align: center;
     letter-spacing: .12em;
 }
-.index .entry .div_02 a
+@media screen and (max-width: 425px)
+{
+    .index .contact .div_01
+    {
+        font-size: 4.6875vw;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .div_01
+    {
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .contact .div_01
+    {
+        font-size: 24px;
+    }
+}
+.index .contact .div_01 a
 {
     font-weight: bold;
 
@@ -911,9 +1778,43 @@ img
 
 @media screen and (min-width: 426px) and (max-width: 768px)
 {
-    .index .summary .table_01
+    .index .summary .table_01 tr
     {
-        display: none;
+        display: block; 
+
+        margin-top: 16px;
+    }
+    .index .summary .table_01 tr:nth-child(n+2) th
+    {
+        margin-top: 32px;
+    }
+    .index .summary .table_01 tr th
+    {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.4; 
+
+        display: list-item;
+
+        text-align: center;
+    }
+    .index .summary .table_01 tr td
+    {
+        font-size: 18px;
+        line-height: 1.4; 
+
+        display: list-item;
+
+        text-align: center;
+    }
+    .index .summary .table_01 tr td ul
+    {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .index .summary .table_01 tr td ul li
+    {
+        margin-top: 10px;
     }
 }
 
@@ -921,19 +1822,119 @@ img
 {
     .index .summary .table_01
     {
-        display: none;
+        width: 660px;
+    }
+    .index .summary .table_01 tr th,
+    .index .summary .table_01 tr td
+    {
+        padding-top: 36px;
+    }
+    .index .summary .table_01 tr:nth-child(2) th,
+    .index .summary .table_01 tr:nth-child(2) td,
+    .index .summary .table_01 tr:nth-child(3) th,
+    .index .summary .table_01 tr:nth-child(3) td
+    {
+        padding-top: 0;
+    }
+    .index .summary .table_01 th
+    {
+        font-size: 18px;
+        line-height: 1.6; 
+
+        width: 120px;
+
+        vertical-align: top;
+    }
+    .index .summary .table_01 td
+    {
+        font-size: 18px;
+        line-height: 1.6; 
+
+        vertical-align: top;
+    }
+    .index .summary .table_01 td small
+    {
+        font-size: 14px;
+    }
+    .index .summary .table_01 td ul li
+    {
+        font-size: 14px;
+
+        margin-top: 4px;
     }
 }
 
-.index .entry .address_01
+.index .contact .address_01
 {
-    font-size: 3.125vw;
     line-height: 1.4;
 
     text-align: center;
     letter-spacing: .06em;
 }
-.index .entry .address_01 a
+@media screen and (max-width: 425px)
+{
+    .index .contact .address_01
+    {
+        font-size: 3.125vw;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .index .contact .address_01
+    {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 769px)
+{
+    .index .contact .address_01
+    {
+        font-size: 14px;
+    }
+}
+.index .contact .address_01 a
 {
     font-family: 'Crimson Text', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
+}
+
+#extensionBox p
+{
+    display: none;
+}
+
+#extensionBox.active
+{
+    width: 100%;
+}
+#extensionBox.active p
+{
+    display: block;
+}
+
+body
+{
+    min-height: 150vh;
+}
+body #language span
+{
+    -webkit-transition: all .36s ease;
+            transition: all .36s ease;
+}
+body.en #language:before
+{
+    color: #fff;
+}
+body.en #language:after
+{
+    color: #221714;
+}
+body.en #language span
+{
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+}
+body.loading #wrapper
+{
+    opacity: 0;
 }

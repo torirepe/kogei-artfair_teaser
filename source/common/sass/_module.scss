@@ -47,22 +47,44 @@
 }
 
 //h3
-.index .entry .h3_01 {
+.index .contact .h3_01 {
   position: relative;
-  padding-bottom: 12%;
   text-align: center;
-  @include fzvw(30);
   line-height: 1;
+  @include mq(sp) {
+    padding-bottom: 12%;
+    @include fzvw(30);
+  }
+  @include mq(tb) {
+    padding-bottom: 40px;
+    font-size: 24px;
+  }
+  @include mq(pc) {
+    padding-bottom: 40px;
+    font-size: 24px;
+  }
   &:after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     display: block;
-    margin-left: -15.4%;
-    padding-bottom: 2.8%;
-    width: 30.8%;
     background-color: $c-grey;
+    @include mq(sp) {
+      margin-left: -15.4%;
+      padding-bottom: 2.8%;
+      width: 30.8%;
+    }
+    @include mq(tb) {
+      margin-left: -47px;
+      padding-bottom: 6px;
+      width: 94px;
+    }
+    @include mq(pc) {
+      margin-left: -47px;
+      padding-bottom: 6px;
+      width: 94px;
+    }
   }
 }
 
@@ -90,75 +112,174 @@
   }
 }
 .index .entry .p_01 {
-  @include fzvw(28);
   line-height: 1.6;
   letter-spacing: .12em;
   text-align: center;
+  @include mq(sp) {
+    @include fzvw(28);
+  }
+  @include mq(tb) {
+    font-size: 18px;
+  }
+  @include mq(pc) {
+    font-size: 20px;
+  }
 }
-.index .entry .p_02 {
+.index .contact .p_01 {
   font-family: $f-crimson;
-  @include fzvw(25);
   line-height: 1.6;
   letter-spacing: .08em;
   text-align: center;
+  @include mq(sp) {
+    @include fzvw(25);
+  }
+  @include mq(tb) {
+    font-size: 18px;
+  }
+  @include mq(pc) {
+    font-size: 18px;
+  }
 }
 
 //div
 .index .intro .div_01 {
-  width: 100%;
   text-align: center;
-  border: 1.6vw solid $c-grey;
+  @include mq(sp) {
+    border: 1.6vw solid $c-grey;
+    width: 100%;
+  }
+  @include mq(tb) {
+    border: 10px solid $c-grey;
+    width: 100%;
+  }
+  @include mq(pc) {
+    border: 10px solid $c-grey;
+    width: 496px;
+  }
   a {
     display: block;
-    padding: 5% 0;
-    @include fzvw(25);
     line-height: 1;
     letter-spacing: .12em;
+    @include mq(sp) {
+      padding: 5% 0;
+      @include fzvw(25);
+    }
+    @include mq(tb) {
+      padding: 20px 0;
+      font-size: 18px;
+    }
+    @include mq(pc) {
+      padding: 20px 0;
+      font-size: 18px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   p {
     padding: 5% 5% 10%;
-    @include fzvw(18);
     line-height: 1.6;
     letter-spacing: .12em;
     text-align: center;
+    @include mq(sp) {
+      padding: 5% 5% 10%;
+      @include fzvw(25);
+    }
+    @include mq(tb) {
+      padding: 30px 0 60px;
+      font-size: 15px;
+    }
+    @include mq(pc) {
+      padding: 30px 0 60px;
+      font-size: 15px;
+    }
   }
 }
 .index .entry .div_01 {
-  width: 100%;
   text-align: center;
-  border: 1.6vw solid $c-grey;
-  background-size: 10% auto;
+  @include mq(sp) {
+    border: 1.6vw solid $c-grey;
+    width: 100%;
+  }
+  @include mq(tb) {
+    border: 10px solid $c-grey;
+    width: 100%;
+  }
+  @include mq(pc) {
+    border: 10px solid $c-grey;
+    width: 534px;
+  }
   a {
     position: relative;
     display: block;
     background: #f4f4f5;
-    padding: 8.6% 0;
     font-family: $f-crimson;
-    @include fzvw(28);
     line-height: 1.6;
+    @include mq(sp) {
+      padding: 8.6% 0;
+      @include fzvw(28);
+    }
+    @include mq(tb) {
+      padding: 24px 0 32px;
+      font-size: 20px;
+    }
+    @include mq(pc) {
+      padding: 24px 0 32px;
+      font-size: 20px;
+    }
     &:before {
       content: '';
       display: block;
-      margin: 0 auto 4.8%;
-      width: 10%;
-      padding-bottom: 14.8%;
       background: url(../images/icon_dl.png) no-repeat center top;
       background-size: contain;
+      @include mq(sp) {
+        margin: 0 auto 4.8%;
+        padding-bottom: 14.8%;
+        width: 10%;
+      }
+      @include mq(tb) {
+        margin: 0 auto 16px;
+        padding-bottom: 36px;
+        width: 26px;
+      }
+      @include mq(pc) {
+        margin: 0 auto 16px;
+        padding-bottom: 36px;
+        width: 26px;
+      }
     }
     i {
       display: block;
-      margin-top: 4.8%;
-      @include fzvw(24);
       line-height: 1;
+      @include mq(sp) {
+        margin-top: 4.8%;
+        @include fzvw(24);
+      }
+      @include mq(tb) {
+        margin-top: 14px;
+        font-size: 16px;
+      }
+      @include mq(pc) {
+        margin-top: 14px;
+        font-size: 16px;
+      }
     }
   }
 }
-.index .entry .div_02 {
+.index .contact .div_01 {
   text-align: center;
   font-family: $f-crimson;
-  @include fzvw(30);
   line-height: 1;
   letter-spacing: .12em;
+  @include mq(sp) {
+    @include fzvw(30);
+  }
+  @include mq(tb) {
+    font-size: 24px;
+  }
+  @include mq(pc) {
+    font-size: 24px;
+  }
   a {
     display: inline-block;
     font-weight: bold;
@@ -206,18 +327,85 @@
     }
   }
   @include mq(tb) {
-    display: none;
+    tr {
+      margin-top: 16px;
+      display: block;
+      &:nth-child(n+2) {
+        th {
+          margin-top: 32px;
+        }
+      }
+      th {
+        text-align: center;
+        font-weight: bold;
+        display: list-item;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+      td {
+        text-align: center;
+        display: list-item;
+        font-size: 18px;
+        line-height: 1.4;
+        ul {
+          font-size: 14px;
+          line-height: 1.2;
+          li {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
   }
   @include mq(pc) {
-    display: none;
+    width: 660px;
+    tr {
+      th, td {
+        padding-top: 36px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        th, td {
+          padding-top: 0;
+        }
+      }
+    }
+    th {
+      vertical-align: top;
+      width: 120px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    td {
+      vertical-align: top;
+      font-size: 18px;
+      line-height: 1.6;
+      small {
+        font-size: 14px;
+      }
+      ul {
+        li {
+          font-size: 14px;
+          margin-top: 4px;
+        }
+      }
+    }
   }
 }
 //address
-.index .entry .address_01 {
+.index .contact .address_01 {
   text-align: center;
-  @include fzvw(20);
   line-height: 1.4;
   letter-spacing: .06em;
+  @include mq(sp) {
+    @include fzvw(20);
+  }
+  @include mq(tb) {
+    font-size: 14px;
+  }
+  @include mq(pc) {
+    font-size: 14px;
+  }
   a {
     font-family: $f-crimson;
   }
