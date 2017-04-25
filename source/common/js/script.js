@@ -3,10 +3,15 @@ $(function(){
   $(document).on('click','#extensionBox a', function(){
     var ah = $('#extensionBox a').innerHeight();
     var ph = $('#extensionBox p').innerHeight();
-    $('#extensionBox').height(ah + ph);
-    $('#extensionBox').toggleClass('active');
+    if($('#extensionBox').hasClass('active')) {
+      $('#extensionBox a').css('height', '');
+      $('#extensionBox').removeClass('active');
+    } else {
+      $('#extensionBox a').css('height', ah+ph);
+      $('#extensionBox').addClass('active');
+    }
   });
-  
+
   //href #
   $(document).on('click', 'a[href^=#]', function () {
     var speed = 360;
@@ -23,17 +28,17 @@ $(function(){
     var next;
     var body = $('body');
     var wrapper = $('#wrapper');
-    if(body.hasClass('jp')) {
+    if(body.hasClass('index')) {
       next = 'en';
     } else if(body.hasClass('en')) {
-      next = 'jp';
+      next = 'index';
     }
     $.ajax(next + '.html', {
       timeout : 1000,
       datatype:'html'
     }).then(function(data){
       var outHtml = $($.parseHTML(data));
-      var shapeHtml = $(outHtml.filter('#' + next)[0].innerHTML);
+      var shapeHtml = $(outHtml.filter('#wrapper')[0].innerHTML);
       wrapper.animate({
         opacity: 0
       }, 360, 'swing', function() {
