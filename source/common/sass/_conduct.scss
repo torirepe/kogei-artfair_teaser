@@ -2,8 +2,66 @@
 #extensionBox {
   position: relative;
   transition: all .24s ease;
+  &.active {
+    a:before {
+      transform-origin: center center;
+      transform: rotate(45deg);
+    }
+    a:after {
+      transform-origin: center center;
+      transform: rotate(45deg);
+    }
+  }
   a {
+    position: relative;
     transition: all .24s ease;
+    &:before {
+      transition: all .24s ease;
+      content: '';
+      display: block;
+      width: 1px;
+      height: .8em;
+      background-color: $c-black;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      font-size: 200%;
+      @include mq(sp) {
+        margin: 3.2% .4em 0 0;
+      }
+      @include mq(tb) {
+        margin: 14px .4em 0 0;
+      }
+      @include mq(pc) {
+        margin: 14px .4em 0 0;
+      }
+    }
+    &:after {
+      transition: all .24s ease;
+      content: '';
+      display: block;
+      width: .8em;
+      height: 1px;
+      background-color: $c-black;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      font-size: 200%;
+      @include mq(sp) {
+        margin-top: 6.8%;
+      }
+      @include mq(tb) {
+        margin-top: 28px;
+      }
+      @include mq(pc) {
+        margin-top: 28px;
+      }
+    }
+    @include mq(pc) {
+      &:hover {
+        background-color: #f4f4f5;
+      }
+    }
   }
   p {
     position: absolute;

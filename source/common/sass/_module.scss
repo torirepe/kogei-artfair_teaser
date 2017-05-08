@@ -110,6 +110,9 @@
     line-height: 1.9;
     font-size: 18px;
   }
+  i {
+    font-style: italic;
+  }
 }
 .index .entry .p_01 {
   line-height: 1.6;
@@ -149,6 +152,7 @@
     display: block;
     line-height: 1;
     letter-spacing: .12em;
+    position: relative;
     @include mq(sp) {
       border: 1.6vw solid $c-grey;
       padding: 5% 0;
@@ -169,10 +173,6 @@
       width: 496px;
       height: 78px;
       font-size: 18px;
-      &:hover {
-        width: 506px;
-        height: 83px;
-      }
     }
   }
   p {
@@ -363,7 +363,7 @@
     }
   }
   @include mq(pc) {
-    width: 660px;
+    width: 720px;
     tr {
       th, td {
         padding-top: 36px;
